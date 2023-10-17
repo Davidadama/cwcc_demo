@@ -227,68 +227,7 @@ class _HomePageState extends State<HomePage> {
         ),
 
         body:
-              /**     FutureBuilder(
-                  // future: _future,
-                    builder: (context,AsyncSnapshot<FirebaseAuth> snapshot){
-                      if (snapshot.connectionState==ConnectionState.done) {
-
-                        final Stream<QuerySnapshot> _usersStream =
-                        FirebaseFirestore.instance.collection('User_information').where('userId', isEqualTo: userID).snapshots();
-
-                        return  StreamBuilder(
-                            stream: _usersStream,
-                            builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-                              if (snapshot.connectionState ==
-                                  ConnectionState.waiting) {
-                                return Center(
-                                    child: CircularProgressIndicator(
-                                      backgroundColor: Colors.blue,
-                                    )
-                                );
-                              }
-
-                              return new ListView(
-                                children:  snapshot.data!.docs.map (
-                                        (DocumentSnapshot document) {
-                                      Map<String, dynamic> data = document.data() as Map<String, dynamic>;
-
-                                      return ListTile(
-                                        title:
-                                        Row(
-                                            children: <Widget>[
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 15.0,right: 5.0,top: 57.0,bottom: 1.0),
-                                                child: Text('Hello',style: TextStyle(fontSize: 25.0,),
-                                                ),
-                                              ),
-                                              Padding(
-                                                  padding: EdgeInsets.only(left: 3.0,right: 5.0,top: 57.0,bottom: 1.0),
-                                                  child: Text(data['Name'] + ',',
-                                                    style: TextStyle(
-                                                        fontWeight: FontWeight.bold,
-                                                        fontSize: 25.0
-                                                    ),
-                                                  )
-                                              )
-                                            ]
-                                        ),
-                                      );
-
-                                    }
-                                ).toList(),
-                              );
-                            }
-                        );
-                      }
-                      return Center(
-                          child: CircularProgressIndicator(
-                            backgroundColor: Colors.blue,
-                          )
-                      );
-
-                    }
-                ), **/
-        ListView(
+                     ListView(
           children: <Widget>[
                Container(
                  decoration: BoxDecoration(
