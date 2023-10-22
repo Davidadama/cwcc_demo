@@ -65,7 +65,7 @@ class _MyAppState extends State<MyApp> {
               return WelcomePage();
             }
             else return HomePage('title');
-          }
+          }, stream: null,
 
       ),
       routes: <String, WidgetBuilder>{
